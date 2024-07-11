@@ -5,9 +5,6 @@ String getGreeting() {
 }
 
 
-
-
-
 2. Write a program to demonstrate compatible type conversions. For eg., float to int, double to float, int to short.
   
 package touch;
@@ -62,4 +59,13 @@ ________________________________________________________________________________
 
 5. Write a program that calculates the average weight of 10 people. Use descriptive and meaningful variable names following Java naming conventions. Use proper datatypes for the variables.
   
-
+class Main{
+    public static void main(String[] args){
+        int[] weight={13,23,33,43,53,63,73,83,93,10};
+        int totalWeight=0;
+        for(int i=0;i<10;i++){
+            totalWeight+=Weight[i];
+        }
+        System.out.println(totalWeight/10.0);
+    }
+}
