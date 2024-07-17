@@ -47,7 +47,7 @@ public class school {
             System.out.println("Invalid input");
         } else {
             Weekday b= Weekday.values()[a - 1];
-            System.out.println("The weekday is: " + weekday);
+            System.out.println("The weekday is: " + b);
         }
 
         scanner.close();
