@@ -1,1 +1,133 @@
 
+1. Create a Java class MathOperations with methods for basic mathematical operations such as add() , subtract() , multiply() , and divide() . Implement method overloading to allow these operations for integers, doubles, and optionally, other types.
+
+
+public class MathOperations{
+
+    //additon
+    public int add(int a, int b){
+      return a+b;
+    }
+    public double add(double a,double b){
+      return a+b;
+    }
+    //subtraction
+    public int sub(int a,int b){
+      return a-b;
+    }
+    public double sub(double a, double b){
+      return a-b;
+    }
+    //multiply
+    public int mul(int a,int b){
+      return a*b;
+    }
+    public double mul(double a, double b){
+      return a*b;
+    }
+    //divide
+    public int div(int a,int b){
+      return a/b;
+    }
+    public double div(double a, double b){
+      return a/b;
+    }
+    public static void main(String []args){
+    MathOperations sc= new MathOperations();
+      System.out. println("integer operations:");
+      System.out.println("add" +" "+sc.add(20,30));
+      System.out.println("sub" +" "+sc.sub(20,3));
+      System.out.println("mul" +" "+sc.mul(5,9));
+      System.out.println("div" +" "+sc.div(50,10));
+      System.out.println("_______________________________________________________________");
+      System.out. println("double operations:");
+      System.out.println("add" +" "+sc.add(8.7,9.7));
+      System.out.println("sub" +" "+sc.sub(2.5,6.5));
+      System.out.println("mul" +" "+sc.mul(4.2,8.6));
+      System.out.println("div" +" "+sc.div(3.9,5.7));
+  }
+  } 
+
+
+
+
+2.Create a class named Person. Overload the constructors such that first constructor takes a single String argument for the name, second takes a String argument for the name and an int argument for the age and third constructor takes a String argument for the name, an int argument for the age, and a String argument for the address.
+
+
+class Person {
+    String name;
+    int age;
+  public  String address;
+
+    public Person (String name ){
+    this.name= name;
+    }
+    public Person(String name, int age){
+      this.name=name;
+      this.age= age;
+    }
+    public Person(String name, int age, String address)
+    {
+this. name =name;
+this.age=age;
+this.address=address;
+    }
+  
+}
+
+
+3. Create a Main class with a main method to test the Person class by creating objects using each constructor and printing their details.
+
+public class Main {
+    public static void main(String[] args) {
+        Person one = new Person("sneha");
+        Person two= new Person("sneha", 21);
+        Person three= new Person("sneha", 21, "no. 32. jasmine nagar korattur chennai");
+        System.out.println(one);
+        System.out.println(two);
+        System.out.println(three);
+    }
+}
+
+
+4.  https://exercism.org/tracks/java/exercises/wizards-and-warriors-2
+
+public class GameMaster {
+    // TODO: define a 'describe' method that returns a description of a Character
+public String describe(Character c){
+    return "You're a level"+" "+c.getLevel()+" "+c.getCharacterClass()+" "+"with"+" "+c.getHitPoints()+" "+"hit points.";
+    
+}
+    // TODO: define a 'describe' method that returns a description of a Destination
+public String describe(Destination d){
+    return "You've arrived at"+" "+d.getName()+", "+"which has"+" "+d.getInhabitants()+" "+"inhabitants.";
+}
+    
+    // TODO: define a 'describe' method that returns a description of a TravelMethod
+  public String describe(TravelMethod t){
+        if(t.toString().equals("WALKING"))
+            return("You're traveling to your destination by "+t.toString().toLowerCase()+".");
+        else
+            return("You're traveling to your destination on "+t.toString().toLowerCase()+".");
+    }
+        
+    // TODO: define a 'describe' method that returns a description of a Character, Destination and TravelMethod
+    public String describe(Character c,Destination d,TravelMethod t){
+        if(t.toString().equals("WALKING"))
+            return "You're a level "+c.getLevel()+" "+c.getCharacterClass() +" with "+c.getHitPoints()+ " hit points."+
+                " You're traveling to your destination by "+t.toString().toLowerCase()+"."+
+                " You've arrived at "+d.getName()+", which has "+d.getInhabitants()+" inhabitants.";
+        else
+            return "You're a level "+c.getLevel()+" "+c.getCharacterClass() +" with "+c.getHitPoints()+ " hit points."+
+                " You're traveling to your destination on "+t.toString().toLowerCase()+"."+
+                " You've arrived at "+d.getName()+", which has "+d.getInhabitants()+" inhabitants.";
+    }
+        
+    // TODO: define a 'describe' method that returns a description of a Character and Destination
+        public String describe(Character c,Destination d){
+        return "You're a level "+c.getLevel()+" "+c.getCharacterClass() +" with "+c.getHitPoints()+ " hit points."+
+            " You're traveling to your destination by walking."+
+            " You've arrived at "+d.getName()+", which has "+d.getInhabitants()+" inhabitants.";
+    }
+}
+
